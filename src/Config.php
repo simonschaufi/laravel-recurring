@@ -78,7 +78,7 @@ class Config implements Arrayable
      *
      * @return \BrianFaust\Recurring\Config
      */
-    public function setStartDate($value): Config
+    public function setStartDate($value): self
     {
         $this->startDate = $value;
 
@@ -98,7 +98,7 @@ class Config implements Arrayable
      *
      * @return \BrianFaust\Recurring\Config
      */
-    public function setEndDate($value): Config
+    public function setEndDate($value): self
     {
         $this->endDate = $value;
 
@@ -118,7 +118,7 @@ class Config implements Arrayable
      *
      * @return Config
      */
-    public function setTimezone($value): Config
+    public function setTimezone($value): self
     {
         $this->timezone = $value;
 
@@ -138,7 +138,7 @@ class Config implements Arrayable
      *
      * @return \BrianFaust\Recurring\Config
      */
-    public function setFrequency($value): Config
+    public function setFrequency($value): self
     {
         $this->frequency = $value;
 
@@ -158,7 +158,7 @@ class Config implements Arrayable
      *
      * @return \BrianFaust\Recurring\Config
      */
-    public function setInterval($value): Config
+    public function setInterval($value): self
     {
         $this->interval = $value;
 
@@ -178,7 +178,7 @@ class Config implements Arrayable
      *
      * @return \BrianFaust\Recurring\Config
      */
-    public function setCount($value): Config
+    public function setCount($value): self
     {
         $this->count = $value;
 
