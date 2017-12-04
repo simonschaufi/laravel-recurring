@@ -24,9 +24,31 @@ class RecurringTraitTest extends AbstractTestCase
 
         $this->assertTrue($builder instanceof \BrianFaust\Recurring\Builder);
     }
+
+    /** @test */
+    public function recurring_model_instantiates_builder()
+    {
+        $recurring = new RecurringModelExample;
+
+        $builder = $recurring->recurr();
+
+        $this->assertTrue($builder instanceof \BrianFaust\Recurring\Builder);
+    }
 }
 
 class RecurringExample
+{
+    use \BrianFaust\Recurring\Traits\Recurring;
+
+    private $start_at = '';
+    private $end_at = '';
+    private $timezone = '';
+    private $frequency = '';
+    private $interval = 0;
+    private $count = null;
+}
+
+class RecurringModelExample extends \Illuminate\Database\Eloquent\Model
 {
     use \BrianFaust\Recurring\Traits\Recurring;
 
