@@ -71,8 +71,11 @@ class Builder
         if (! $schedule = $this->schedule()) {
             return false;
         }
+        if (! $next = $schedule->next()) {
+            return false;
+        }
 
-        return Carbon::instance($schedule->next()->getStart());
+        return Carbon::instance($next->getStart());
     }
 
     /**
