@@ -13,8 +13,6 @@ declare(strict_types=1);
 
 namespace BrianFaust\Tests\Recurring;
 
-use BrianFaust\Tests\Recurring\AbstractTestCase;
-
 class RecurringTraitTest extends AbstractTestCase
 {
     /** @test */
