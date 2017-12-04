@@ -19,24 +19,23 @@ use DateTimeZone;
 use Carbon\Carbon;
 use Recurr\Frequency;
 use Recurr\RecurrenceCollection;
-use Illuminate\Database\Eloquent\Model;
 use Recurr\Transformer\ArrayTransformer;
 use Recurr\Transformer\ArrayTransformerConfig;
 
 class Builder
 {
-    /** @var \DateTime */
-    private $model;
+    /** @var mixed */
+    private $recurring;
 
-    /** @var \DateTime */
+    /** @var \BrianFaust\Recurring\Config */
     private $config;
 
     /**
-     * @param \Illuminate\Database\Eloquent\Model $model
+     * @param mixed  $recurring
      */
-    public function __construct(Model $model)
+    public function __construct($recurring)
     {
-        $this->model = $model;
+        $this->recurring = $recurring;
         $this->config = $this->buildConfig();
     }
 
@@ -72,8 +71,11 @@ class Builder
         if (! $schedule = $this->schedule()) {
             return false;
         }
+        if (! $next = $schedule->next()) {
+            return false;
+        }
 
-        return Carbon::instance($schedule->next()->getStart());
+        return Carbon::instance($next->getStart());
     }
 
     /**
@@ -160,7 +162,7 @@ class Builder
      */
     private function buildConfig(): Config
     {
-        $config = $this->model->getRecurringConfig();
+        $config = $this->recurring->getRecurringConfig();
 
         return new Config(
             $config['start_date'], $config['end_date'], $config['timezone'],
