@@ -32,10 +32,10 @@ class RecurringExample
 {
     use \BrianFaust\Recurring\Traits\Recurring;
 
-    private $start_at   = '';
-    private $end_at     = '';
-    private $timezone   = '';
-    private $frequency  = '';
-    private $interval   = 0;
-    private $count      = null;
+    private $start_at = '';
+    private $end_at = '';
+    private $timezone = '';
+    private $frequency = '';
+    private $interval = 0;
+    private $count = null;
 }

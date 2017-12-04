@@ -19,7 +19,6 @@ use DateTimeZone;
 use Carbon\Carbon;
 use Recurr\Frequency;
 use Recurr\RecurrenceCollection;
-use Illuminate\Database\Eloquent\Model;
 use Recurr\Transformer\ArrayTransformer;
 use Recurr\Transformer\ArrayTransformerConfig;
 
