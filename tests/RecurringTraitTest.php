@@ -18,7 +18,7 @@ class RecurringTraitTest extends AbstractTestCase
     /** @test */
     public function recurring_instantiates_builder()
     {
-        $recurring = new RecurringExample;
+        $recurring = new RecurringExample();
 
         $builder = $recurring->recurr();
 
@@ -28,7 +28,7 @@ class RecurringTraitTest extends AbstractTestCase
     /** @test */
     public function recurring_model_instantiates_builder()
     {
-        $recurring = new RecurringModelExample;
+        $recurring = new RecurringModelExample();
 
         $builder = $recurring->recurr();
 

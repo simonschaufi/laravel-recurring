@@ -13,12 +13,12 @@ declare(strict_types=1);
 
 namespace BrianFaust\Recurring;
 
-use DateTime;
-use Recurr\Rule;
-use DateTimeZone;
 use Carbon\Carbon;
+use DateTime;
+use DateTimeZone;
 use Recurr\Frequency;
 use Recurr\RecurrenceCollection;
+use Recurr\Rule;
 use Recurr\Transformer\ArrayTransformer;
 use Recurr\Transformer\ArrayTransformerConfig;
 
@@ -31,7 +31,7 @@ class Builder
     private $config;
 
     /**
-     * @param mixed  $recurring
+     * @param mixed $recurring
      */
     public function __construct($recurring)
     {
@@ -44,7 +44,7 @@ class Builder
      */
     public function first()
     {
-        if (! $schedule = $this->schedule()) {
+        if (!$schedule = $this->schedule()) {
             return false;
         }
 
@@ -56,7 +56,7 @@ class Builder
      */
     public function last()
     {
-        if (! $schedule = $this->schedule()) {
+        if (!$schedule = $this->schedule()) {
             return false;
         }
 
@@ -68,10 +68,10 @@ class Builder
      */
     public function next()
     {
-        if (! $schedule = $this->schedule()) {
+        if (!$schedule = $this->schedule()) {
             return false;
         }
-        if (! $next = $schedule->next()) {
+        if (!$next = $schedule->next()) {
             return false;
         }
 
@@ -83,7 +83,7 @@ class Builder
      */
     public function current()
     {
-        if (! $schedule = $this->schedule()) {
+        if (!$schedule = $this->schedule()) {
             return false;
         }
 
@@ -118,7 +118,7 @@ class Builder
             ->setInterval($config['interval'])
             ->setCount($config['count']);
 
-        if (! empty($config['end_date'])) {
+        if (!empty($config['end_date'])) {
             $rule = $rule->setEndDate(new DateTime($config['end_date'], new DateTimeZone($config['timezone'])));
         }
 
@@ -132,7 +132,7 @@ class Builder
     {
         $frequency = $this->getFromConfig('frequency');
 
-        if (! in_array($frequency, $this->config->getFrequencies())) {
+        if (!in_array($frequency, $this->config->getFrequencies())) {
             throw new \InvalidArgumentException("$frequency is not a valid frequency");
         }
 

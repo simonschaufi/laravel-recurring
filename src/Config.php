@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace BrianFaust\Recurring;
 
-use Recurr\Frequency;
 use Illuminate\Contracts\Support\Arrayable;
+use Recurr\Frequency;
 
 class Config implements Arrayable
 {
