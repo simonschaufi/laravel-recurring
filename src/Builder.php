@@ -116,7 +116,7 @@ class Builder
             ->setStartDate(new DateTime($config['start_date'], new DateTimeZone($config['timezone'])))
             ->setTimezone($config['timezone'])
             ->setFreq($this->getFrequencyType())
-            ->setInterval($config['interval'])
+            ->setInterval($config['interval']);
 
         if (! empty($config['count'])) {
             $rule = $rule->setCount($config['count']);
