@@ -71,6 +71,7 @@ class Builder
         if (!$schedule = $this->schedule()) {
             return false;
         }
+        
         if (!$next = $schedule->next()) {
             return false;
         }
@@ -116,7 +117,10 @@ class Builder
             ->setTimezone($config['timezone'])
             ->setFreq($this->getFrequencyType())
             ->setInterval($config['interval'])
-            ->setCount($config['count']);
+
+        if (! empty($config['count'])) {
+            $rule = $rule->setCount($config['count']);
+        }
 
         if (!empty($config['end_date'])) {
             $rule = $rule->setEndDate(new DateTime($config['end_date'], new DateTimeZone($config['timezone'])));
