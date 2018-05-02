@@ -71,7 +71,7 @@ class Builder
         if (!$schedule = $this->schedule()) {
             return false;
         }
-        
+
         if (!$next = $schedule->next()) {
             return false;
         }
@@ -118,7 +118,7 @@ class Builder
             ->setFreq($this->getFrequencyType())
             ->setInterval($config['interval']);
 
-        if (! empty($config['count'])) {
+        if (!empty($config['count'])) {
             $rule = $rule->setCount($config['count']);
         }
 
