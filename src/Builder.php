@@ -5,13 +5,13 @@ declare(strict_types=1);
 /*
  * This file is part of Laravel Recurring.
  *
- * (c) Brian Faust <hello@brianfaust.de>
+ * (c) Brian Faust <hello@basecode.sh>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Recurring;
+namespace Artisanry\Recurring;
 
 use Carbon\Carbon;
 use DateTime;
@@ -27,7 +27,7 @@ class Builder
     /** @var mixed */
     private $recurring;
 
-    /** @var \BrianFaust\Recurring\Config */
+    /** @var \Artisanry\Recurring\Config */
     private $config;
 
     /**
@@ -162,7 +162,7 @@ class Builder
     }
 
     /**
-     * @return \BrianFaust\Recurring\Config
+     * @return \Artisanry\Recurring\Config
      */
     private function buildConfig(): Config
     {

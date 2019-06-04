@@ -5,13 +5,13 @@ declare(strict_types=1);
 /*
  * This file is part of Laravel Recurring.
  *
- * (c) Brian Faust <hello@brianfaust.de>
+ * (c) Brian Faust <hello@basecode.sh>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Recurring;
+namespace Artisanry\Tests\Recurring;
 
 class RecurringTraitTest extends AbstractTestCase
 {
@@ -22,7 +22,7 @@ class RecurringTraitTest extends AbstractTestCase
 
         $builder = $recurring->recurr();
 
-        $this->assertTrue($builder instanceof \BrianFaust\Recurring\Builder);
+        $this->assertTrue($builder instanceof \Artisanry\Recurring\Builder);
     }
 
     /** @test */
@@ -32,13 +32,13 @@ class RecurringTraitTest extends AbstractTestCase
 
         $builder = $recurring->recurr();
 
-        $this->assertTrue($builder instanceof \BrianFaust\Recurring\Builder);
+        $this->assertTrue($builder instanceof \Artisanry\Recurring\Builder);
     }
 }
 
 class RecurringExample
 {
-    use \BrianFaust\Recurring\Traits\Recurring;
+    use \Artisanry\Recurring\Traits\Recurring;
 
     private $start_at = '';
     private $end_at = '';
@@ -50,7 +50,7 @@ class RecurringExample
 
 class RecurringModelExample extends \Illuminate\Database\Eloquent\Model
 {
-    use \BrianFaust\Recurring\Traits\Recurring;
+    use \Artisanry\Recurring\Traits\Recurring;
 
     private $start_at = '';
     private $end_at = '';

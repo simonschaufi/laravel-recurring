@@ -1,12 +1,12 @@
 {
-    "name": "faustbrian/laravel-recurring",
+    "name": "artisanry/recurring",
     "description": "simshaun/recurr integration for Laravel/Eloquent.",
-    "keywords": ["laravel", "framework", "Laravel-Recurring", "Laravel Recurring", "Brian Faust", "faustbrian"],
+    "keywords": ["laravel", "framework", "Laravel-Recurring", "Laravel Recurring"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
-        "email": "hello@brianfaust.me",
-        "homepage": "https://brianfaust.me"
+        "email": "hello@basecode.sh",
+        "homepage": "https://basecode.sh"
     }],
     "require": {
         "php": "^7.1",
@@ -20,12 +20,12 @@
     },
     "autoload": {
         "psr-4": {
-            "BrianFaust\\Recurring\\": "src/"
+            "Artisanry\\Recurring\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BrianFaust\\Tests\\Recurring\\": "tests"
+            "Artisanry\\Tests\\Recurring\\": "tests"
         }
     },
     "config": {
