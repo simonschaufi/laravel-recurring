@@ -18,7 +18,7 @@
     "require": {
         "php": "^7.2",
         "illuminate/support": "^5.8",
-        "simshaun/recurr": "^3.0"
+        "simshaun/recurr": "^4.0"
     },
     "require-dev": {
         "graham-campbell/testbench": "^5.0",
