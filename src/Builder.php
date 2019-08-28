@@ -16,7 +16,6 @@ namespace Artisanry\Recurring;
 use Carbon\Carbon;
 use DateTime;
 use DateTimeZone;
-use Recurr\Frequency;
 use Recurr\RecurrenceCollection;
 use Recurr\Rule;
 use Recurr\Transformer\ArrayTransformer;
